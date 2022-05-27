@@ -1,0 +1,287 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.grid-container {
+  margin-top: 140px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1px;
+}
+
+.grid-card {
+  height: 401px;
+  width: 100%;
+  object-fit: fill no-repeat;
+  /* background-size: contain; */
+  color: white;
+  position: relative;
+  border-bottom: 5px solid #ed3833;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.grid-card.active .line {
+  width: 2px;
+  background: red;
+  position: absolute;
+  bottom: 0;
+  height: 28%;
+  left: 10%;
+}
+
+.grid-card.active .triangle {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid red;
+}
+
+.card-container {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  left: 25px;
+  font-size: 30px;
+  width: 80%;
+}
+
+.card-text {
+  margin-left: 5px;
+}
+
+.grid-element1 {
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.673)
+    ),
+    url("/../src/assets/img/desktopImgSize/AdobeStock_300546467.png");
+}
+.grid-element2 {
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.673)
+    ),
+    url("/../src/assets/img/desktopImgSize/AdobeStock_194409710.png");
+}
+.grid-element3 {
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.673)
+    ),
+    url("/../src/assets/img/desktopImgSize/AdobeStock_334598408.png");
+}
+.grid-element4 {
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.673)
+    ),
+    url("/../src/assets/img/desktopImgSize/AdobeStock_167777189.png");
+}
+.grid-element5 {
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.673)
+    ),
+    url("/../src/assets/img/desktopImgSize/AdobeStock_226785771.png");
+}
+
+.debt_capital_markets,
+.market_and_credit_analysis,
+.money_markets,
+.custody,
+.fixed_income {
+  display: none;
+}
+
+.bottom-container {
+  background-color: #fafafa;
+  margin-bottom: 73px;
+}
+
+/* make image grey */
+.grey {
+  filter: grayscale(100%);
+}
+
+.card-text-parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.expanded-text {
+  width: 80%;
+  margin: auto;
+  line-height: 2;
+  font-size: 18px;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.expanded-text.show {
+  animation: 2s linear 0.1s 1 normal forwards show;
+  display: block;
+}
+
+@media screen and (min-width: 720px) {
+  .expanded-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.expanded-text-header {
+  color: #ed3833;
+  font-size: 30px;
+}
+.expanded-text-subheader {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+  padding-inline-start: 20px;
+}
+
+ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.hidden {
+  display: none;
+}
+.showing {
+  display: block;
+}
+
+.close-group {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 100px;
+  text-align: center;
+}
+.close-button {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.close-text {
+  color: #b23223;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .grid-card {
+    height: 152px;
+    border-bottom: none;
+  }
+
+  .grid-card .line {
+    display: none;
+  }
+
+  .grid-card .triangle {
+    display: none;
+  }
+
+  .card-container {
+    width: 60%;
+  }
+  .bottom-container {
+    border-top: 5px #ed3833 solid;
+    height: 257px;
+    background-color: #ededed;
+  }
+  .grid-element1 {
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.673)
+      ),
+      url("/../src/assets/img/mobile/AdobeStock_300546467.png");
+    background-size: cover;
+  }
+  .grid-element2 {
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.673)
+      ),
+      url("/../src/assets/img/mobile/AdobeStock_194409710.png");
+  }
+  .grid-element3 {
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.673)
+      ),
+      url("/../src/assets/img/mobile/AdobeStock_334598408.png");
+  }
+  .grid-element4 {
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.673)
+      ),
+      url("/../src/assets/img/mobile/AdobeStock_167777189.png");
+  }
+  .grid-element5 {
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.673)
+      ),
+      url("/../src/assets/img/mobile/AdobeStock_226785771.png");
+  }
+}
+
+/* Animations */
+@-webkit-keyframes show {
+  from {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  to {
+    max-height: 10000px;
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+}
+@keyframes show {
+  from {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  to {
+    max-height: 10000px;
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+}
